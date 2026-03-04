@@ -1,9 +1,9 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
+from evaluation_metrics import metrics
 import numpy as np
 from sklearn.preprocessing import StandardScaler
-
+from sklearn.metrics import recall_score,f1_score,accuracy_score,precision_score,confusion_matrix
 class KNearestNeighbour:
     def __init__(self):
         self.X =None
@@ -39,8 +39,11 @@ x_train,x_test,y_train,y_test =  train_test_split(
 scaler = StandardScaler()
 x_train = scaler.fit_transform(x_train)
 x_test = scaler.transform(x_test)
-
 model = KNearestNeighbour()
 model.fit(x_train,y_train,K=3)
 y_pred  = model.predict(x_test)
-print("Accuracy: ",accuracy_score(y_test,y_pred))
+print("Accuracy Score : ",metrics.accuracy_score(y_test,y_pred))
+print("Precision Score : ",metrics.precision_score(y_test,y_pred))
+print("Recall Score : ",metrics.recall_score(y_test,y_pred))
+print("F1 Score : ",metrics.f1_score(y_test,y_pred))
+print("Confusion metrics: \n",metrics.confusion_matrix(y_test,y_pred))
