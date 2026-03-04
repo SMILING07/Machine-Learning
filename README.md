@@ -1,85 +1,113 @@
 # 🚀 Machine Learning Journey
 
-![Python](https://img.shields.io/badge/Python-3.x-blue) ![Machine
-Learning](https://img.shields.io/badge/Focus-Continuous%20Learning-success)
-![Status](https://img.shields.io/badge/Status-Actively%20Building-orange)
-![Commitment](https://img.shields.io/badge/Mindset-Consistent🔥-red)
+![Python](https://img.shields.io/badge/Python-3.x-blue)\
+![Machine Learning](https://img.shields.io/badge/Focus-Deep%20Understanding-success)\
+![Status](https://img.shields.io/badge/Status-Actively%20Building-orange)\
+![Mindset](https://img.shields.io/badge/Mindset-Consistent%20%26%20Disciplined-red)
 
 ------------------------------------------------------------------------
-
 ## 👨‍🎓 About This Repository
 
-I am a student deeply committed to mastering **Machine Learning**
-through consistent practice and implementation.
+I am a student committed to mastering **Machine Learning and Deep Learning** by building everything from scratch.
 
-This repository represents my continuous journey of learning, building,
-experimenting, and improving --- one algorithm at a time.
+This repository documents my continuous progress --- from foundational regression models to implementing fully working multi-layer neural networks with backpropagation.
 
-I believe in: - Learning by building - Writing algorithms from scratch -
-Understanding core mathematics - Maintaining consistent GitHub commits -
-Improving every single day
+I focus on:
+
+- Learning by building  
+- Implementing algorithms from scratch  
+- Understanding the mathematics behind ML  
+- Writing structured and scalable code  
+- Maintaining consistent GitHub commits
 
 ------------------------------------------------------------------------
 
-## 📚 Algorithms Implemented So Far
+## 📚 Algorithms Implemented
 
 ### 🔹 Regression
 
--   Simple Linear Regression
--   Multilinear Regression (2 implementations)
--   Linear Regression using Gradient Descent
+- Simple Linear Regression  
+- Multiple Linear Regression (2 implementations)  
+- Linear Regression using Gradient Descent  
 
 ### 🔹 Classification
 
--   Logistic Regression
--   K-Nearest Neighbour (KNN)
+- Logistic Regression  
+- K-Nearest Neighbour (KNN)  
+
+### 🔹 Deep Learning
+
+- Multi-Layer Perceptron (MLP) implemented from scratch  
+    - ReLU activation  
+    - He initialization  
+    - Manual backpropagation  
+    - MSE loss  
+    - L2 Regularization  
+    - Achieved **R² ≈ 0.75** on California Housing dataset  
 
 ------------------------------------------------------------------------
 
 ## 🧠 Concepts Practiced
 
--   Supervised Learning
--   Gradient Descent Optimization
--   Feature Scaling (Z-Score Normalization)
--   Model Training using `.fit()`
--   Prediction using `.predict()`
--   Dataset handling with Pandas
--   Implementation using NumPy & Scikit-learn
+- Supervised Learning  
+- Gradient Descent Optimization  
+- Backpropagation  
+- Weight Initialization (He Initialization)  
+- Feature Scaling (Z-score normalization)  
+- Train-Test Splitting  
+- Regularization (L2 / Ridge)  
+- Model Evaluation (R², MAE)  
+- Bias-Variance Understanding  
 
 ------------------------------------------------------------------------
 
 ## 📂 Project Structure
 
-Machine-Learning/ │ ├── data/ ├── SimpleLinearRegression.py ├──
-LinearRegression_GradientDecend.py ├── multilinear_regression_1.py ├──
-multilinear_regression_2.py ├── logistic_regression.py ├──
-K_nearest_neighbour.py └── README.md
+```
+Machine-Learning/
+├── data/
+│   ├── heart.csv
+│   └── moore.csv
+├── nural_networks/
+│   ├── data/
+│   │   └── AQI.csv
+│   └── mlp_regressor.py
+├── evaluation_metrics.py
+├── K_nearest_neighbour.py
+├── LinearRegression_Gradient.py
+├── logistic_regression.py
+├── multilinear_regression.py
+├── SimpleLinearRegression.py
+├── README.md
+```
 
 ------------------------------------------------------------------------
 
-## 🎯 My Learning Philosophy
+## 📊 Highlight Project
 
-This is not just a repository of code.
+### 🏠 California Housing Price Prediction
 
-It is: - A record of my progress - Proof of my consistency - A
-foundation for advanced ML & AI systems - A stepping stone toward
-industry-level expertise
+Built a deep neural network from scratch using only NumPy.
 
-I am continuously improving this repository by: - Adding new
-algorithms - Improving code structure - Learning evaluation metrics -
-Exploring visualization - Building end-to-end ML projects
+Features:  
+- Dynamic forward pass  
+- Manual gradient computation  
+- Proper scaling and inverse transformation  
+- Performance evaluation using R²  
+
+Result:  
+- Test R² ≈ 0.75  
 
 ------------------------------------------------------------------------
-
 ## 🚀 Next Goals
 
--   Decision Tree
--   Support Vector Machine (SVM)
--   Naive Bayes
--   Model Evaluation Metrics (Accuracy, Precision, Recall, F1 Score)
--   Confusion Matrix Implementation
--   Data Visualization using Matplotlib
--   Full End-to-End ML Project
+- Decision Trees (from scratch)  
+- Support Vector Machines  
+- Naive Bayes  
+- Confusion Matrix implementation  
+- Dynamic neural network architecture  
+- Dropout & Early Stopping  
+- End-to-end ML projects  
 
 ------------------------------------------------------------------------
 
@@ -87,34 +115,30 @@ Exploring visualization - Building end-to-end ML projects
 
 Clone the repository:
 
-    git clone https://github.com/SMILING07/Machine-Learning.git
-    cd Machine-Learning
+```bash
+git clone https://github.com/SMILING07/Machine-Learning.git
+cd Machine-Learning
+```
 
 Install dependencies:
 
-    pip install numpy pandas scikit-learn
+```bash
+pip install numpy pandas scikit-learn
+```
 
 ------------------------------------------------------------------------
-
-## ▶️ Run Example
-
-    python logistic_regression.py
-
-------------------------------------------------------------------------
-
 ## 📈 Long-Term Vision
 
-To build strong mathematical intuition, practical coding skills, and
-real-world machine learning systems through consistent effort and
-disciplined learning.
+To build strong mathematical intuition, practical engineering skills, and real-world machine learning systems --- progressing toward advanced AI and deep learning architectures.
 
 ------------------------------------------------------------------------
 
 ## 👨‍💻 Author
 
-SMILING07\
-Machine Learning Student \| Consistent Builder \| Future ML Engineer
+SMILING07  
+Machine Learning Student | Consistent Builder | Future ML Engineer  
 
 ------------------------------------------------------------------------
 
-⭐ This repository grows as I grow.
+⭐ This repository evolves as I evolve.
+
