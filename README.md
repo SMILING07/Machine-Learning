@@ -93,7 +93,8 @@ Features:
 - Dynamic forward pass  
 - Manual gradient computation  
 - Proper scaling and inverse transformation  
-- Performance evaluation using R²  
+- Performance evaluation using R²
+- Confusion Matrix implementation  
 
 Result:  
 - Test R² ≈ 0.75  
@@ -104,7 +105,6 @@ Result:
 - Decision Trees (from scratch)  
 - Support Vector Machines  
 - Naive Bayes  
-- Confusion Matrix implementation  
 - Dynamic neural network architecture  
 - Dropout & Early Stopping  
 - End-to-end ML projects  
