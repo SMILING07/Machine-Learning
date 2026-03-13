@@ -42,12 +42,7 @@ Status:
 
 ===============================================================================
 """
-import pandas as pd
 import numpy as np
-from sklearn.metrics import r2_score
-from sklearn.preprocessing import StandardScaler
-from sklearn. model_selection import train_test_split
-from sklearn.datasets import fetch_california_housing
 
 class MLPRegressor:
     def __init__(self):
@@ -93,6 +88,7 @@ class MLPRegressor:
         B2 -= dB2*lr
         B3 -= dB3*lr
         return W1,W2,W3,B1,B2,B3
+    
     def fit(self,x ,y,lr=0.0001,epochs=100,_Lambda = 0.001)->None:
         self.W1 = np.random.randn(x.shape[1],64) *np.sqrt(2/x.shape[1])
         self.W2 = np.random.randn(64,32) * np.sqrt(2/64)
@@ -111,8 +107,8 @@ class MLPRegressor:
             self.W1,self.W2,self.W3,self.B1,self.B2,self.B3 = self._backward(x,y,A1,A2,A3,Z1,Z2,Z3,self.W1,self.W2,self.W3,self.B1,self.B2,self.B3,lr)
             if (epoch%10==0):
                 print(f"Epoch: {epoch} Loss: {self._MSE(y,A3)}")
-
         print("Training completed!")
+
     def predict(self,x)->np.ndarray:
         Z1 = self._forward(x,self.W1,self.B1)
         A1 = self._RelU(Z1)
@@ -122,39 +118,42 @@ class MLPRegressor:
         A3 = Z3
         return A3
 
-# data = pd.read_csv("data/AQI.csv")
-# data = data.replace([np.inf, -np.inf], np.nan) 
-# data = data.dropna()  
-# X = data.drop(columns=['AQI']).values
-# Y = data['AQI'].values.reshape(-1,1)
-
-#had Accuracy of R2_Score:  0.9987475375246964
-
-data = fetch_california_housing()
-X = data.data
-Y = data.target
-Y = Y.reshape(Y.shape[0],1)
-
-# had Accuracy score R2_Score:  0.7519517360388108
-
-x_train,x_test,y_train,y_test = train_test_split(
-    X,Y,
-    random_state=100,
-    test_size=0.2
-)
-x_scaler  =  StandardScaler()
-x_train =  x_scaler.fit_transform(x_train)
-x_test  =  x_scaler.transform(x_test)
-
-y_scaler = StandardScaler()
-y_train = y_scaler.fit_transform(y_train)
-y_test = y_scaler.transform(y_test)
-
 np.random.seed(20)
-model = MLPRegressor()
-lr=0.1
-model.fit(x_train,y_train,lr=lr,epochs=2000,_Lambda=0.0001)
-y_pred = model.predict(x_test)
-y_pred = y_scaler.inverse_transform(y_pred)
-y_test = y_scaler.inverse_transform(y_test)
-print("R2_Score: ",r2_score(y_test,y_pred))
+if __name__ =="__main__":
+    import pandas as pd
+    from sklearn.metrics import r2_score
+    from sklearn.preprocessing import StandardScaler
+    from sklearn. model_selection import train_test_split
+    from sklearn.datasets import fetch_california_housing
+    # data = pd.read_csv("data/AQI.csv")
+    # data = data.replace([np.inf, -np.inf], np.nan) 
+    # data = data.dropna()  
+    # X = data.drop(columns=['AQI']).values
+    # Y = data['AQI'].values.reshape(-1,1)
+    #had Accuracy of R2_Score:  0.9987475375246964
+    data = fetch_california_housing()
+    X = data.data
+    Y = data.target
+    Y = Y.reshape(Y.shape[0],1)
+    # had Accuracy score R2_Score:  0.7519517360388108
+    x_train,x_test,y_train,y_test = train_test_split(
+        X,Y,
+        random_state=100,
+        test_size=0.2
+    )
+
+    x_scaler  =  StandardScaler()
+    x_train =  x_scaler.fit_transform(x_train)
+    x_test  =  x_scaler.transform(x_test)
+
+    y_scaler = StandardScaler()
+    y_train = y_scaler.fit_transform(y_train)
+    y_test = y_scaler.transform(y_test)
+
+    model = MLPRegressor()
+    lr=0.1
+    model.fit(x_train,y_train,lr=lr,epochs=2000,_Lambda=0.0001)
+    y_pred = model.predict(x_test)
+    y_pred = y_scaler.inverse_transform(y_pred)
+    y_test = y_scaler.inverse_transform(y_test)
+    print("R2_Score: ",r2_score(y_test,y_pred))

@@ -1,144 +1,193 @@
 # 🚀 Machine Learning Journey
 
-![Python](https://img.shields.io/badge/Python-3.x-blue)\
-![Machine Learning](https://img.shields.io/badge/Focus-Deep%20Understanding-success)\
-![Status](https://img.shields.io/badge/Status-Actively%20Building-orange)\
+![Python](https://img.shields.io/badge/Python-3.x-blue) ![Machine
+Learning](https://img.shields.io/badge/Focus-Deep%20Understanding-success)
+![Status](https://img.shields.io/badge/Status-Actively%20Building-orange)
 ![Mindset](https://img.shields.io/badge/Mindset-Consistent%20%26%20Disciplined-red)
 
 ------------------------------------------------------------------------
+
 ## 👨‍🎓 About This Repository
 
-I am a student committed to mastering **Machine Learning and Deep Learning** by building everything from scratch.
+I am a student committed to mastering **Machine Learning and Deep
+Learning** by building algorithms **from scratch**.
 
-This repository documents my continuous progress --- from foundational regression models to implementing fully working multi-layer neural networks with backpropagation.
+This repository documents my continuous progress --- from foundational
+regression models to implementing fully working **multi-layer neural
+networks and clustering algorithms**.
 
-I focus on:
+My learning philosophy:
 
-- Learning by building  
-- Implementing algorithms from scratch  
-- Understanding the mathematics behind ML  
-- Writing structured and scalable code  
-- Maintaining consistent GitHub commits
-
-------------------------------------------------------------------------
-
-## 📚 Algorithms Implemented
-
-### 🔹 Regression
-
-- Simple Linear Regression  
-- Multiple Linear Regression (2 implementations)  
-- Linear Regression using Gradient Descent  
-
-### 🔹 Classification
-
-- Logistic Regression  
-- K-Nearest Neighbour (KNN)  
-
-### 🔹 Deep Learning
-
-- Multi-Layer Perceptron (MLP) implemented from scratch  
-    - ReLU activation  
-    - He initialization  
-    - Manual backpropagation  
-    - MSE loss  
-    - L2 Regularization  
-    - Achieved **R² ≈ 0.75** on California Housing dataset  
+-   Learn by **building from scratch**
+-   Understand the **mathematics behind ML**
+-   Write **clean and modular code**
+-   Organize algorithms in structured modules
+-   Maintain **consistent GitHub commits**
 
 ------------------------------------------------------------------------
 
-## 🧠 Concepts Practiced
+# 📚 Algorithms Implemented
 
-- Supervised Learning  
-- Gradient Descent Optimization  
-- Backpropagation  
-- Weight Initialization (He Initialization)  
-- Feature Scaling (Z-score normalization)  
-- Train-Test Splitting  
-- Regularization (L2 / Ridge)  
-- Model Evaluation (R², MAE)  
-- Bias-Variance Understanding  
+## 🔹 Regression
 
-------------------------------------------------------------------------
+-   Simple Linear Regression
+-   Linear Regression
+-   Multilinear Regression
 
-## 📂 Project Structure
+## 🔹 Classification
 
-```
-Machine-Learning/
-├── data/
-│   ├── heart.csv
-│   └── moore.csv
-├── nural_networks/
-│   ├── data/
-│   │   └── AQI.csv
-│   └── mlp_regressor.py
-├── evaluation_metrics.py
-├── K_nearest_neighbour.py
-├── LinearRegression_Gradient.py
-├── logistic_regression.py
-├── multilinear_regression.py
-├── SimpleLinearRegression.py
-├── README.md
-```
+-   Logistic Regression
+-   K-Nearest Neighbour (KNN)
 
-------------------------------------------------------------------------
+## 🔹 Deep Learning
 
-## 📊 Highlight Project
+### Multi-Layer Perceptron (MLP)
 
-### 🏠 California Housing Price Prediction
+Implemented fully from scratch using NumPy.
 
-Built a deep neural network from scratch using only NumPy.
+Features:
 
-Features:  
-- Dynamic forward pass  
-- Manual gradient computation  
-- Proper scaling and inverse transformation  
-- Performance evaluation using R²
-- Confusion Matrix implementation  
+-   ReLU activation
+-   Softmax output layer (for classification)
+-   He weight initialization
+-   Manual forward propagation
+-   Manual backpropagation
+-   L2 Regularization
+-   Gradient-based optimization
 
-Result:  
-- Test R² ≈ 0.75  
+Models implemented:
 
-------------------------------------------------------------------------
-## 🚀 Next Goals
+-   **MLP Regressor**
+-   **MLP Classifier**
 
-- Decision Trees (from scratch)  
-- Support Vector Machines  
-- Naive Bayes  
-- Dynamic neural network architecture  
-- Dropout & Early Stopping  
-- End-to-end ML projects  
+Regression performance:
+
+**R² ≈ 0.75** on the California Housing dataset.
 
 ------------------------------------------------------------------------
 
-## ⚙️ Installation
+## 🔹 Unsupervised Learning
+
+### K-Means Clustering
+
+Implemented completely from scratch.
+
+Features:
+
+-   Random centroid initialization
+-   Iterative centroid updates
+-   Distance-based clustering
+-   WCSS (Within Cluster Sum of Squares)
+-   **Elbow Method** for optimal K selection
+-   Customer segmentation experiment
+
+------------------------------------------------------------------------
+
+# 🧠 Concepts Practiced
+
+-   Supervised Learning
+-   Unsupervised Learning
+-   Gradient Descent Optimization
+-   Backpropagation
+-   Weight Initialization (He Initialization)
+-   Feature Scaling (Z-score normalization)
+-   Train-Test Splitting
+-   Regularization (L2 / Ridge)
+-   Clustering Algorithms
+-   Model Evaluation (R², MAE)
+
+------------------------------------------------------------------------
+
+# 📂 Project Structure
+
+    Machine-Learning
+    │
+    ├── neural_networks
+    │   ├── data
+    │   ├── mlp_classifier.py
+    │   └── mlp_regressor.py
+    │
+    ├── supervised
+    │   ├── data
+    │   ├── SimpleLinearRegression.py
+    │   ├── LinearRegression.py
+    │   ├── MultilinearRegression.py
+    │   └── LogisticRegression.py
+    │
+    ├── unsupervised
+    │   └── K_means_clustering.py
+    │
+    ├── utils
+    │   └── evaluation_metrics.py
+    │
+    └── README.md
+
+------------------------------------------------------------------------
+
+# 📊 Highlight Project
+
+## 🏠 California Housing Price Prediction
+
+A deep neural network implemented **entirely from scratch using NumPy**.
+
+Features:
+
+-   Manual forward propagation
+-   Manual gradient computation
+-   Proper feature scaling
+-   Model evaluation using **R² score**
+-   Regularization to prevent overfitting
+
+Result:
+
+**Test R² ≈ 0.75**
+
+------------------------------------------------------------------------
+
+# 🚀 Next Goals
+
+Upcoming algorithms to implement:
+
+-   Decision Trees (from scratch)
+-   PCA (Principal Component Analysis)
+-   Naive Bayes
+-   Support Vector Machines
+-   DBSCAN Clustering
+-   Dynamic neural network architectures
+-   Dropout & Early Stopping
+
+------------------------------------------------------------------------
+
+# ⚙️ Installation
 
 Clone the repository:
 
-```bash
+``` bash
 git clone https://github.com/SMILING07/Machine-Learning.git
 cd Machine-Learning
 ```
 
 Install dependencies:
 
-```bash
-pip install numpy pandas scikit-learn
+``` bash
+pip install numpy pandas matplotlib scikit-learn
 ```
 
 ------------------------------------------------------------------------
-## 📈 Long-Term Vision
 
-To build strong mathematical intuition, practical engineering skills, and real-world machine learning systems --- progressing toward advanced AI and deep learning architectures.
+# 📈 Long-Term Vision
+
+To build strong **mathematical intuition**, **practical engineering
+skills**, and eventually develop **real-world machine learning systems**
+and advanced deep learning architectures.
 
 ------------------------------------------------------------------------
 
-## 👨‍💻 Author
+# 👨‍💻 Author
 
-SMILING07  
-Machine Learning Student | Consistent Builder | Future ML Engineer  
+**SMILING07**\
+Machine Learning Student \| Consistent Builder \| Future ML Engineer
 
 ------------------------------------------------------------------------
 
 ⭐ This repository evolves as I evolve.
-

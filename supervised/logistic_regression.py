@@ -49,19 +49,20 @@ class LogisticRegression:
     def predict(self,x):
         return (self._sigmoid( x@self.weights+ self.bias)>0.5).astype(int)
 np.random.seed(32)
-data = pd.read_csv(r"data/heart.csv")
-X    = np.array(data.T[:-1].T)
-Y    = np.array(data.target)
-x_train ,x_test,y_train,y_test = train_test_split(X,Y)
-scaler = StandardScaler()
-x_train= scaler.fit_transform(x_train)
-x_test =scaler.transform(x_test)
-epochs = 1500
-lr = 0.1
-model = LogisticRegression()
-model.fit(x_train,y_train,epochs,lr)
-y_pred = model.predict(x_test)
-print(f"Accuracy: {accuracy_score(y_test,y_pred)}")
+if __name__ =="__main__":
+    data = pd.read_csv(r"supervised/data/heart.csv")
+    X    = np.array(data.T[:-1].T)
+    Y    = np.array(data.target)
+    x_train ,x_test,y_train,y_test = train_test_split(X,Y)
+    scaler = StandardScaler()
+    x_train= scaler.fit_transform(x_train)
+    x_test =scaler.transform(x_test)
+    epochs = 1500
+    lr = 0.1
+    model = LogisticRegression()
+    model.fit(x_train,y_train,epochs,lr)
+    y_pred = model.predict(x_test)
+    print(f"Accuracy: {accuracy_score(y_test,y_pred)}")
 
 """
 FINAL RESULT:

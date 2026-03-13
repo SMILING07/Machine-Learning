@@ -107,30 +107,30 @@ class KMeansCluster:
         return total_wcss
     
 np.random.seed(20)
-data           = pd.read_csv(r"/home/smiling/Documents/ML/Machine-Learning/data/Mall_Customers.csv")
-data           = data.drop("CustomerID", axis=1)
-data["Gender"] = data["Gender"].replace({"Male":0,"Female":1})
-# data = load_iris()
-# data=data.data
+if __name__ =="__main__":
+    data           = pd.read_csv(r"supervised/data")
+    data           = data.drop("CustomerID", axis=1)
+    data["Gender"] = data["Gender"].replace({"Male":0,"Female":1})
+    # data = load_iris()
+    # data=data.data
 
-x     = np.array(data)
-y     = []
-model = KMeansCluster()
-max_k = 50
-for i in range(1,max_k):
-    K = i
+    x     = np.array(data)
+    y     = []
+    model = KMeansCluster()
+    max_k = 50
+    for i in range(1,max_k):
+        K = i
+        model.fit(x,K)
+        model.predict(x).flatten()
+        y.append(model.error(x))
+    k     = np.arange(1,max_k)
+    plt.plot(k, y, 'ro-') 
+    plt.title('The Elbow Method for Optimal K')
+    plt.xlabel('Number of Clusters (K)')
+    plt.ylabel('WCSS (Error)')
+    plt.grid(True)
+    plt.show()
+    K    = 5
     model.fit(x,K)
-    model.predict(x).flatten()
-    y.append(model.error(x))
-k     = np.arange(1,max_k)
-plt.plot(k, y, 'ro-') 
-plt.title('The Elbow Method for Optimal K')
-plt.xlabel('Number of Clusters (K)')
-plt.ylabel('WCSS (Error)')
-plt.grid(True)
-plt.show()
-#by the graph the optimal K value is 6 by Elbow method
-K    = 5
-model.fit(x,K)
-data["customer_labels"] = model.predict(x)
-data.to_csv(r"data/Segmented_customer.csv")
+    data["customer_labels"] = model.predict(x)
+    data.to_csv(r"supervised/data/Segmented_customer.csv")

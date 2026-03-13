@@ -23,7 +23,7 @@ def backward(y_pred,x,y_real,weight,bias):
     bias   -= db*lr
     return weight,bias
 
-data = pd.read_csv("data/moore.csv")
+data = pd.read_csv("supervised/data/moore.csv")
 X = data.features - data.features.min()
 Y = np.log(data.target)
 x_train,x_test,y_train,y_test = train_test_split(
